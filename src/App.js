@@ -90,7 +90,7 @@ class App extends Component {
     return (
       <div className="App">
       {console.log(this.state.apiData)}
-        <h1> Real Time Weather </h1>
+        <h1 id="title"> Real Time Weather </h1>
         <Input onChange={this.onChange} onClick={this.onClick}/>
         <Weather data={this.state.apiData} />
       </div>

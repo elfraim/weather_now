@@ -10,12 +10,11 @@ const Weather = ({ data }) => {
   }else {
     const icon = data.weather[0].icon
     const iconLink = `http://openweathermap.org/img/w/${icon}.png`
-    const Background = `./imgs/winter.png`
     return(
-      <div className="container" style={{backgroundImage: `url(${Background})`}}>
+      <div className="container">
         <div className="row">
           <div className="col">
-            <h1>{data.name}, {data.sys.country}</h1>
+            <h1 id="countryName">{data.name}, {data.sys.country}</h1>
           </div>
         </div>
         <div className="row">
