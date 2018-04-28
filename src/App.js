@@ -33,6 +33,8 @@ class App extends Component {
   
   onClick(){
     this.fetchNewApi()
+    
+
     if(this.state.tempDiscription === undefined){
       return <h1>NOPE</h1>
     }
@@ -87,6 +89,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {console.log(this.state.apiData)}
         <h1> Real Time Weather </h1>
         <Input onChange={this.onChange} onClick={this.onClick}/>
         <Weather data={this.state.apiData} />
